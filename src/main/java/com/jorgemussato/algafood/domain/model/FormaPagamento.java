@@ -1,8 +1,5 @@
 package com.jorgemussato.algafood.domain.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonRootName;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -10,18 +7,16 @@ import javax.persistence.*;
 
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Table(name = "tb_forma_pagamento")
 @Entity
-@Table(name = "tb_cozinha")
-public class Cozinha {
+public class FormaPagamento {
 
-    @EqualsAndHashCode.Include
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Include
     private Long id;
 
-//    @JsonProperty("titulo")
-//    @JsonIgnore
     @Column(nullable = false)
-    private String nome;
+    private String descricao;
 
 }
