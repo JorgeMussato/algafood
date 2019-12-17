@@ -10,10 +10,10 @@ import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import java.math.BigDecimal;
 
-public class RestauranteComNomeSemelhante implements Specification<Restaurante> {
+public class RestauranteComNomeSemelhanteSpec implements Specification<Restaurante> {
     private String nome;
 
-    public RestauranteComNomeSemelhante(String nome) {
+    public RestauranteComNomeSemelhanteSpec(String nome) {
         this.nome = nome;
     }
 
