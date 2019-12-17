@@ -12,7 +12,7 @@ public class RestauranteSpecsFactory {
     }
 
     public static Specification<Restaurante> comNomeSemelhante(String nome) {
-        return ((root, criteriaQuery, criteriaBuilder) -> criteriaBuilder.like(root.get("nome"), nome));
+        return ((root, criteriaQuery, criteriaBuilder) -> criteriaBuilder.like(root.get("nome"), "%" + nome + "%"));
     }
 
 }
