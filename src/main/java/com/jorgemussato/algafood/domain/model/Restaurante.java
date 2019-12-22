@@ -32,6 +32,10 @@ public class Restaurante {
     private Cozinha cozinha;
 
     @JsonIgnore
+    @Embedded
+    private Endereco endereco;
+
+    @JsonIgnore
     @ManyToMany
     @JoinTable(name = "tb_restaurante_forma_pagamento",
             joinColumns = @JoinColumn(name = "restaurante_id"),
