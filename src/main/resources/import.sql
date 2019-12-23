@@ -12,9 +12,9 @@ insert into tb_cidade (nome, estado_id) values ('Londrina', 1);
 insert into tb_cidade (nome, estado_id) values ('Arapongas', 1);
 insert into tb_cidade (nome, estado_id) values ('São Paulo', 4);
 
-INSERT INTO tb_restaurante(endereco_bairro, endereco_cep, endereco_complemento, endereco_logradouro, endereco_numero, nome, taxa_frete, cozinha_id, endereco_cidade_id) VALUES ('Colina Verde', '86050610', NULL, 'Rua flor da primavera', '550', 'Sugoi', 19.2, 2, 1);
-insert into tb_restaurante (nome, taxa_frete, cozinha_id) values ('Matsuri', 20.1, 2);
-insert into tb_restaurante (nome, taxa_frete, cozinha_id) values ('Feijuca', 20.1, 1);
+INSERT INTO tb_restaurante(endereco_bairro, endereco_cep, endereco_complemento, endereco_logradouro, endereco_numero, nome, taxa_frete, cozinha_id, endereco_cidade_id, data_cadastro, data_atualizacao) VALUES ('Colina Verde', '86050610', NULL, 'Rua flor da primavera', '550', 'Sugoi', 19.2, 2, 1, utc_timestamp, utc_timestamp);
+insert into tb_restaurante (nome, taxa_frete, cozinha_id, data_cadastro, data_atualizacao) values ('Matsuri', 20.1, 2, utc_timestamp, utc_timestamp);
+insert into tb_restaurante (nome, taxa_frete, cozinha_id, data_cadastro, data_atualizacao) values ('Feijuca', 20.1, 1, utc_timestamp, utc_timestamp);
 
 insert into tb_forma_pagamento (descricao) values ('Cartão de crédito');
 insert into tb_forma_pagamento (descricao) values ('Cartão de débito');
