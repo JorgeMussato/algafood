@@ -16,6 +16,12 @@ INSERT INTO tb_restaurante(endereco_bairro, endereco_cep, endereco_complemento, 
 insert into tb_restaurante (nome, taxa_frete, cozinha_id, data_cadastro, data_atualizacao) values ('Matsuri', 20.1, 2, utc_timestamp, utc_timestamp);
 insert into tb_restaurante (nome, taxa_frete, cozinha_id, data_cadastro, data_atualizacao) values ('Feijuca', 20.1, 1, utc_timestamp, utc_timestamp);
 
+INSERT INTO tb_produto(ativo, descricao, nome, preco, restaurante_id) VALUES (true, 'Feijoada simples', 'Feijoada', 19.90, 3);
+INSERT INTO tb_produto(ativo, descricao, nome, preco, restaurante_id) VALUES (true, 'Feijoada dupla', 'Feijoada', 23.90, 3);
+INSERT INTO tb_produto(ativo, descricao, nome, preco, restaurante_id) VALUES (true, 'Frango empanado com ervilhas', 'Frango empanado', 16.90, 3);
+INSERT INTO tb_produto(ativo, descricao, nome, preco, restaurante_id) VALUES (true, 'Frango grelhado com legumes', 'Frango grelhado', 16.90, 3);
+
+
 insert into tb_forma_pagamento (descricao) values ('Cartão de crédito');
 insert into tb_forma_pagamento (descricao) values ('Cartão de débito');
 insert into tb_forma_pagamento (descricao) values ('Dinheiro');
