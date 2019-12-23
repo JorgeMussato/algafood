@@ -30,10 +30,6 @@ public class Restaurante {
     @Column(name = "taxa_frete", nullable = false)
     private BigDecimal taxaFrete;
 
-    @ManyToOne
-    @JoinColumn(name = "cozinha_id", nullable = false)
-    private Cozinha cozinha;
-
     @JsonIgnore
     @Embedded
     private Endereco endereco;
@@ -48,7 +44,10 @@ public class Restaurante {
     @Column(nullable = false, columnDefinition = "datetime")
     private LocalDateTime dataAtualizacao;
 
-    @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name = "cozinha_id", nullable = false)
+    private Cozinha cozinha;
+
     @ManyToMany
     @JoinTable(name = "tb_restaurante_forma_pagamento",
             joinColumns = @JoinColumn(name = "restaurante_id"),
