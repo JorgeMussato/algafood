@@ -13,6 +13,7 @@ import java.math.BigDecimal;
 public class Produto {
 
     @Id
+    @EqualsAndHashCode.Include
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
